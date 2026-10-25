@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Asadullah Shahbaz profile avatar</title>
+  <desc id="desc">A purple and teal illustrated avatar with the initials AS.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e293b"/>
+      <stop offset="1" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+  <circle cx="256" cy="256" r="256" fill="url(#background)"/>
+  <circle cx="256" cy="210" r="86" fill="#fde68a"/>
+  <path d="M157 199c8-72 53-111 103-111 57 0 93 41 96 112-26-18-48-30-78-31-38-2-73 10-121 30z" fill="#1e293b"/>
+  <path d="M126 470c11-97 61-145 130-145s119 48 130 145z" fill="url(#shirt)"/>
+  <path d="M215 283c13 15 28 23 41 23s28-8 41-23" fill="none" stroke="#b45309" stroke-linecap="round" stroke-width="8"/>
+  <circle cx="222" cy="211" r="7" fill="#1e293b"/>
+  <circle cx="290" cy="211" r="7" fill="#1e293b"/>
+  <text x="256" y="432" fill="#fff" font-family="Arial, sans-serif" font-size="54" font-weight="700" text-anchor="middle">AS</text>
+</svg>

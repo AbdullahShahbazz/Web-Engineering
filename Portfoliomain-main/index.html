@@ -1,0 +1,228 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Personal profile portfolio for Abdullah Shahbaz, a frontend web developer specializing in HTML, CSS, JavaScript, React, Tailwind CSS, and Git.">
+    <title>Abdullah Shahbaz | Personal Profile</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50%' x='50%' dominant-baseline='middle' text-anchor='middle' font-size='80'>👨‍💻</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="assets/tailwind.css" rel="stylesheet">
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #1f2937;
+            --muted: #64748b;
+            --brand: #0f766e;
+            --brand-dark: #115e59;
+            --surface: rgba(255, 255, 255, 0.9);
+            --line: #e2e8f0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-width: 320px;
+            background:
+                radial-gradient(circle at top left, rgba(45, 212, 191, 0.2), transparent 32rem),
+                linear-gradient(135deg, #f0fdfa 0%, #ecfeff 52%, #f0f9ff 100%);
+            color: var(--ink);
+            font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.82);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+            backdrop-filter: blur(14px);
+        }
+
+        .profile-card,
+        .content-card {
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 24px 70px rgba(30, 41, 59, 0.12);
+            backdrop-filter: blur(16px);
+        }
+
+        .profile-card {
+            border-radius: 2rem;
+        }
+
+        .content-card {
+            border-radius: 1.5rem;
+            box-shadow: 0 14px 40px rgba(30, 41, 59, 0.08);
+        }
+
+        .profile-image {
+            border: 7px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 18px 45px rgba(8, 145, 178, 0.25);
+        }
+
+        .skill-item {
+            transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-3px);
+            border-color: rgba(15, 118, 110, 0.35);
+            box-shadow: 0 10px 22px rgba(15, 118, 110, 0.1);
+        }
+
+        .social-link,
+        .nav-link,
+        .primary-link {
+            transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+        }
+
+        .social-link:hover,
+        .nav-link:hover {
+            color: var(--brand);
+        }
+
+        .primary-link:hover {
+            background: var(--brand-dark);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 640px) {
+            .profile-card {
+                border-radius: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="glass-nav sticky top-0 z-20">
+        <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Primary navigation">
+            <a href="index.html" class="font-bold tracking-tight text-slate-900" aria-label="Go to home page">
+                <span class="text-teal-700">&lt;</span> Abdullah Shahbaz<span class="text-teal-700">/&gt;</span>
+            </a>
+
+            <input id="main-menu-toggle" class="nav-toggle sr-only" type="checkbox" aria-controls="main-menu">
+            <label for="main-menu-toggle"
+                    class="menu-toggle-label rounded-lg border border-slate-200 bg-white p-2 text-slate-600 shadow-sm sm:hidden"
+                    aria-label="Open navigation menu">
+                <span class="sr-only">Open navigation menu</span>
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </label>
+
+            <div id="main-menu" class="absolute left-5 right-5 top-16 rounded-xl border border-slate-200 bg-white p-4 shadow-xl sm:static sm:block sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none">
+                <ul class="flex flex-col gap-3 text-sm font-semibold text-slate-600 sm:flex-row sm:items-center sm:gap-6">
+                    <li><a class="nav-link" href="#about">About Me</a></li>
+                    <li><a class="nav-link" href="#skills">Skills</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                    <li><a class="nav-link" href="linked%20file/experience.html">Experience</a></li>
+                    <li><a class="nav-link" href="linked%20file/project.html">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-5 py-10 sm:py-14 lg:px-8">
+        <section class="profile-card grid gap-10 overflow-hidden p-6 sm:p-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center"
+            aria-labelledby="profile-heading">
+            <div class="order-2 lg:order-1">
+                <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-teal-700">Personal Profile</p>
+                <h1 id="profile-heading" class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
+                    Abdullah Shahbaz
+                </h1>
+                <p class="mt-4 max-w-2xl text-lg font-medium leading-8 text-slate-600">
+                    Frontend web developer building responsive, accessible, and user-friendly digital experiences.
+                </p>
+                <div class="mt-7 flex flex-wrap gap-3">
+                    <a class="primary-link inline-flex items-center rounded-xl bg-teal-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-teal-200"
+                        href="#contact">Contact Me</a>
+                    <a class="inline-flex items-center rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-700 shadow-sm hover:border-teal-300 hover:text-teal-700"
+                        href="#" target="_blank" rel="noopener">View Resume</a>
+                </div>
+            </div>
+
+            <div class="order-1 flex justify-center lg:order-2">
+                <img class="profile-image h-56 w-56 rounded-full object-cover sm:h-72 sm:w-72"
+                    src="assets/profile-avatar.svg" alt="Illustrated profile avatar for Abdullah Shahbaz">
+            </div>
+        </section>
+
+        <div class="mt-8 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+            <section id="about" class="content-card p-6 sm:p-8" aria-labelledby="about-heading">
+                <p class="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">Introduction</p>
+                <h2 id="about-heading" class="mt-2 text-3xl font-extrabold text-slate-900">About Me</h2>
+                <div class="mt-5 space-y-4 leading-8 text-slate-600">
+                    <p>
+                        I am Abdullah Shahbaz, a frontend web developer who enjoys turning ideas into clean,
+                        practical, and responsive websites.
+                    </p>
+                    <p>
+                        My work focuses on semantic HTML, modern CSS, JavaScript, React, and Tailwind CSS. I also
+                        use Git and GitHub to manage projects, collaborate with teams, and keep development work
+                        organized.
+                    </p>
+                </div>
+            </section>
+
+            <section id="skills" class="content-card p-6 sm:p-8" aria-labelledby="skills-heading">
+                <p class="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">Toolkit</p>
+                <h2 id="skills-heading" class="mt-2 text-3xl font-extrabold text-slate-900">Skills</h2>
+                <ul class="mt-5 grid gap-3 sm:grid-cols-2" aria-label="Technical skills">
+                    <li class="skill-item rounded-xl border border-slate-200 bg-white p-4 font-semibold text-slate-700">HTML5</li>
+                    <li class="skill-item rounded-xl border border-slate-200 bg-white p-4 font-semibold text-slate-700">CSS3</li>
+                    <li class="skill-item rounded-xl border border-slate-200 bg-white p-4 font-semibold text-slate-700">JavaScript</li>
+                    <li class="skill-item rounded-xl border border-slate-200 bg-white p-4 font-semibold text-slate-700">React</li>
+                    <li class="skill-item rounded-xl border border-slate-200 bg-white p-4 font-semibold text-slate-700">Tailwind CSS</li>
+                    <li class="skill-item rounded-xl border border-slate-200 bg-white p-4 font-semibold text-slate-700">Git &amp; GitHub</li>
+                </ul>
+            </section>
+        </div>
+
+        <section id="contact" class="content-card mt-8 p-6 sm:p-8" aria-labelledby="contact-heading">
+            <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                <div>
+                    <p class="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">Let’s connect</p>
+                    <h2 id="contact-heading" class="mt-2 text-3xl font-extrabold text-slate-900">Contact</h2>
+                    <p class="mt-3 max-w-2xl leading-7 text-slate-600">
+                        Have a project, collaboration, or learning opportunity in mind? Send me an email and I will
+                        get back to you.
+                    </p>
+                </div>
+                <a class="primary-link inline-flex shrink-0 items-center justify-center rounded-xl bg-teal-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-teal-200"
+                    href="#">abdullahshahbaz@example.com</a>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-x-6 gap-y-3 border-t border-slate-200 pt-5 text-sm font-semibold text-slate-600">
+                <a class="social-link" href="#" target="_blank" rel="noopener">GitHub</a>
+                <a class="social-link" href="#" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="social-link" href="#" target="_blank" rel="noopener">Stack Overflow</a>
+            </div>
+        </section>
+
+        <section class="mt-8 grid gap-4 sm:grid-cols-2" aria-label="Portfolio pages">
+            <a class="content-card p-5 hover:-translate-y-1" href="linked%20file/experience.html">
+                <h2 class="font-bold text-slate-900">Explore my experience →</h2>
+                <p class="mt-2 text-sm leading-6 text-slate-600">Review my work and volunteering background.</p>
+            </a>
+            <a class="content-card p-5 hover:-translate-y-1" href="linked%20file/project.html">
+                <h2 class="font-bold text-slate-900">View my projects →</h2>
+                <p class="mt-2 text-sm leading-6 text-slate-600">See examples of applications and interfaces I have built.</p>
+            </a>
+        </section>
+    </main>
+
+    <footer class="px-5 pb-8 text-center text-sm text-slate-500">
+        <p>Made with <span aria-label="love">❤️</span> by Abdullah Shahbaz</p>
+    </footer>
+
+</body>
+
+</html>
